@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/banzhuren"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_290">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon_head_master_bg" />
+
+    <TextView
+        android:id="@+id/tv_head_master"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+        android:text="是否为班主任？"
+        android:textColor="@color/color_5f676e"
+        android:textSize="@dimen/sp_20" />
+
+    <TextView
+        android:id="@+id/headmaster_text22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_head_master"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="令公桃李满天下，何用堂前更种花。"
+        android:textColor="@color/color_959ea6"
+        android:textSize="@dimen/sp_16" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:background="@drawable/icon_btn_lan"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp_6"
+        android:text="否"
+        android:textColor="@color/color_ffffff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:background="@drawable/icon_btn_lan"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp_6"
+        android:text="是"
+        android:textColor="@color/color_ffffff"
+        android:textSize="20sp" />
+
+</RelativeLayout>
