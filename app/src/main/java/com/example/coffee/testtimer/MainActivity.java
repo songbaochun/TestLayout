@@ -5,6 +5,8 @@ import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -23,15 +25,19 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private XBanner mBanner2;
     private List<TestActivity> imlist = new ArrayList<>();
+    private List<FunctionalModuleEntity> rvIcon = new ArrayList<>();
+    private RecyclerView rv_modular;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_home_page);
         mBanner2 = findViewById(R.id.banner2);
+        rv_modular = findViewById(R.id.rv_modular);
 
         initBanner(mBanner2);
         setBanner();
+        setRv_icon();
     }
 
     /**
@@ -79,5 +85,24 @@ public class MainActivity extends AppCompatActivity {
         //刷新数据之后，需要重新设置是否支持自动轮播
         mBanner2.setAutoPlayAble(imlist.size() > 1);
         mBanner2.setBannerData(imlist);
+    }
+
+    private void setRv_icon() {
+        rvIcon.add(new FunctionalModuleEntity(R.drawable.icon_class_notice, "班级通知"));
+        rvIcon.add(new FunctionalModuleEntity(R.drawable.icon_eight_point_reading, "八点阅读"));
+        rvIcon.add(new FunctionalModuleEntity(R.drawable.icon_class_vote, "班级投票"));
+        rvIcon.add(new FunctionalModuleEntity(R.drawable.icon_class_album, "班级相册"));
+        rvIcon.add(new FunctionalModuleEntity(R.drawable.icon_class_course, "课程表"));
+        rvIcon.add(new FunctionalModuleEntity(R.drawable.icon_school_mien, "校园风采"));
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 4) {
+            @Override
+            public boolean canScrollVertically() {
+                return false;
+            }
+        };
+        rv_modular.setLayoutManager(gridLayoutManager);
+        DynamicPraiseUserAdapter adapter = new DynamicPraiseUserAdapter(this, rvIcon);
+        rv_modular.setAdapter(adapter);
     }
 }
