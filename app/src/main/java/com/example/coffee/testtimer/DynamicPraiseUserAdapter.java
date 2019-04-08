@@ -41,9 +41,8 @@ public class DynamicPraiseUserAdapter extends RecyclerView.Adapter<DynamicPraise
     @Override
     public void onBindViewHolder(DynamicPraiseUserHolder holder, int position) {
         Glide.with(context)
-                .load(praiseUserData.get(position).modularIcon)
                 .asBitmap()
-                .diskCacheStrategy(DiskCacheStrategy.ALL) //设置缓存
+                .load(praiseUserData.get(position).modularIcon)
                 .into(holder.im_modular);
         holder.tv_modular_name.setText(praiseUserData.get(position).modularName);
     }

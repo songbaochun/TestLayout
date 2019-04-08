@@ -1,1 +1,1 @@
-include ':app', ':xbanner'
+include ':app', ':xbanner', ':picture_library', ':ucrop'
