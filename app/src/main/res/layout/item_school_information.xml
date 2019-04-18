@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_118"
+    android:background="@color/color_ffffff">
+
+    <ImageView
+        android:id="@+id/im_information_icon"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="@dimen/dp_108"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:scaleType="fitXY"
+        android:src="@color/color_2eb6e4" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@id/im_information_icon"
+        android:layout_marginRight="@dimen/dp_14">
+
+        <TextView
+            android:id="@+id/tv_information_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="哈哈哈哈啊哈哈啊哈"
+            android:textColor="@color/color_5f676e"
+            android:textSize="@dimen/sp_16"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv_information_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_information_title"
+            android:maxLines="2"
+            android:textColor="@color/color_5f676e"
+            android:textSize="@dimen/dp_14"
+            android:ellipsize="end"
+            android:text="校园风采校园风采校园风采校园风采校园风采校园风采校园风采校园风采"
+            android:layout_marginTop="@dimen/dp_5"/>
+
+        <TextView
+            android:id="@+id/tv_information_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/sp_12"
+            android:layout_below="@id/tv_information_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="2019/4/8"/>
+    </RelativeLayout>
+
+</RelativeLayout>

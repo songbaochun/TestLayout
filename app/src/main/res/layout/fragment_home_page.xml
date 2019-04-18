@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginLeft="@dimen/dp_14"
             android:src="@drawable/icon_home_page_logo" />
 
         <ImageView
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_14"
             android:src="@drawable/icon_home_page_scan_login" />
     </RelativeLayout>
 
@@ -74,7 +74,7 @@
                 <ImageView
                     android:id="@+id/im_notice"
                     android:layout_width="@dimen/dp_80"
-                    android:layout_height="@dimen/dp_16"
+                    android:layout_height="@dimen/dp_14"
                     android:layout_centerVertical="true"
                     android:src="@drawable/icon_home_page_notice" />
 
@@ -115,8 +115,8 @@
                 android:id="@+id/jiaoyu_gengduo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp_16"
-                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:layout_marginRight="@dimen/dp_14"
                 android:layout_marginTop="@dimen/dp_25">
 
                 <TextView
@@ -141,7 +141,8 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_photo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"/>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

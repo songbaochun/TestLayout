@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
@@ -21,6 +22,7 @@ import java.util.List;
 public class DynamicPraiseUserAdapter extends RecyclerView.Adapter<DynamicPraiseUserAdapter.DynamicPraiseUserHolder> {
     private List<FunctionalModuleEntity> praiseUserData;
     private Context context;
+    private onItemClickListenerBack onItemClickListenerBack;
 
     public DynamicPraiseUserAdapter(Context context, List<FunctionalModuleEntity> praiseUserData) {
         this.praiseUserData = praiseUserData;
@@ -39,22 +41,34 @@ public class DynamicPraiseUserAdapter extends RecyclerView.Adapter<DynamicPraise
     }
 
     @Override
-    public void onBindViewHolder(DynamicPraiseUserHolder holder, int position) {
+    public void onBindViewHolder(DynamicPraiseUserHolder holder, final int position) {
         Glide.with(context)
                 .asBitmap()
                 .load(praiseUserData.get(position).modularIcon)
                 .into(holder.im_modular);
         holder.tv_modular_name.setText(praiseUserData.get(position).modularName);
+        holder.rl_modular_div.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onItemClickListenerBack.onItemClickListener(view, position);
+            }
+        });
+    }
+
+    public void setOnItemClickListenerBack(com.example.coffee.testtimer.onItemClickListenerBack onItemClickListenerBack) {
+        this.onItemClickListenerBack = onItemClickListenerBack;
     }
 
     class DynamicPraiseUserHolder extends RecyclerView.ViewHolder {
         private TextView tv_modular_name;
         private ImageView im_modular;
+        private RelativeLayout rl_modular_div;
 
         public DynamicPraiseUserHolder(View itemView) {
             super(itemView);
             tv_modular_name = itemView.findViewById(R.id.tv_modular_name);
             im_modular = itemView.findViewById(R.id.im_modular);
+            rl_modular_div = itemView.findViewById(R.id.rl_modular_div);
         }
     }
 }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_30"
+    android:layout_marginLeft="@dimen/dp_14">
+
+    <ImageView
+        android:id="@+id/im_information"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="@dimen/dp_100"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_14"
+        android:layout_toRightOf="@id/im_information"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_information_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/color_262a32"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_information_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_13"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/dp_4"
+            android:lines="2"
+            android:textColor="@color/color_414c54"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+</RelativeLayout>
